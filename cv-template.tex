@@ -29,22 +29,25 @@
 %%% Comment one or the other commands below depending on 
 %%% where you want to include Iowa-specific info or not
 \toggletrue{internal}
-\togglefalse{internal}
+%\togglefalse{internal}
 
 \iftoggle{internal}{
  \includeversion{IOWA ONLY}
  \renewcommand{\iowa}[1]{#1}
+ % The commands below are to be used in bibtex files in entry of the form:
+ % options = {contrib=\equalc},
+ \newcommand{\majorc} {*\ }
+ \newcommand{\secondc}{**\ }
+ \newcommand{\equalc} {***\ }
+ \newcommand{\minorc} {****\ }
 }{
  \excludeversion{IOWA ONLY}
  \renewcommand{\iowa}[1]{}
+ \newcommand{\majorc} {}
+ \newcommand{\secondc}{}
+ \newcommand{\equalc} {}
+ \newcommand{\minorc} {}
 }
-
-\iftoggle{internal}{
-% Adds contrib option to bibtex files
-\makeatletter
-\renewbibmacro*{begentry}{\printtext{\bib@extsym}}
-\makeatother
-}{}
 
 
 %% Add bibtex files here, must include the .bib suffix
@@ -221,7 +224,8 @@ Iowa City, Iowa 52242
 \end{tabular}
 
 
-
+% The entire section below is ignored 
+% when the toggle 'internal' is set to false
 \iowa{
 %===========================
 \section*{\teaching}
@@ -276,7 +280,6 @@ Iowa City, Iowa 52242
  \hline
 \end{tabular}
 \smallskip
-
 
 %-------------------------------------
 \subsection*{Innovations in Teaching}
@@ -357,7 +360,6 @@ Iowa City, Iowa 52242
 \smallskip
 
 % this is typically for advising of undergrads
-
 \begin{tabular}{l@{\quad\ }p{35em}} 
  @Term @Year -- @Term @Year
  & @MentoringTypeOrExplanation, @Role, \# Students: @NoOfStudents[, @Annotation]
@@ -510,7 +512,6 @@ Iowa City, Iowa 52242
 \end{tabular}
 \end{itemize}
 
-
 \end{IOWA ONLY}
 
 
@@ -518,15 +519,15 @@ Iowa City, Iowa 52242
 \section*{\scholarship}
 %======================
 
-\iowa{
+% The legend below appears only when the toggle 'internal' is set to false
+\begin{IOWA ONLY}
 \begin{center}
 \begin{tabular}{lll}
 {\bf CLAS * System:} & * = major contribution   &    *** = equal contribution \\
                      & ** = secondary contribution & **** = minor contribution
 \end{tabular}
 \end{center}
-}
-
+\end{IOWA ONLY}
 
 %-------------------------------
 \subsection*{Publications}
@@ -581,14 +582,14 @@ with a note that indicates the status of the publication
  resetnumbers=true
 ]
 
+% This subsection should contain non-refereed publications that are only 
+% available in electronic form. Examples include edited electronic
+% proceedings and arXiv reports (not associated to a journal publication).
+%
 \printbibliography[title={\normalsize Electronic Publications},
  keyword=electronic,
  resetnumbers=true
 ]
-%% This subsection should contain non-refereed publications that are only available
-%% in electronic form. Examples include edited electronic proceedings and
-%% arxiv reports (not associated to a journal publication).
-
 
 \printbibliography[title={\normalsize \new{Technical Reports}},
  type=report,
@@ -630,7 +631,6 @@ with a note that indicates the status of the publication
    Further details at @WebAddress
 \end{tabular}
 
-
 %------------------------------------
 \subsection*{Inventions and Patents}
 %------------------------------------
@@ -640,7 +640,6 @@ with a note that indicates the status of the publication
  \item @InventorList. @Number, @Title. @Annotation
  \item @InventorList. @Number, @Title. @Annotation
 \end{enumerate}
-
 
 %----------------------------
 \subsection*{\new{Software}}
@@ -664,8 +663,6 @@ with a note that indicates the status of the publication
  \item [] @Area
 \end{itemize}
 }
-
-
 
 %----------------------------------
 \subsection*{Grants and Contracts}
@@ -765,18 +762,16 @@ with a note that indicates the status of the publication
 
 \end{itemize}
 
-
-
 %-----------------------------------------------------------
 \subsection*{Invited Lectures and Conference Presentations}
 %-----------------------------------------------------------
 \smallskip
 
 \begin{itemize}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[] \textbf{National --- Colloquium}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Month @Year 
  & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
@@ -789,10 +784,10 @@ with a note that indicates the status of the publication
    @City, @State
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[] \textbf{National --- Invited Lecture}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Month @Year 
  & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
@@ -809,7 +804,7 @@ with a note that indicates the status of the publication
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[] \textbf{National --- Conference Presentations}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+\\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Month @Year 
  & @ConferenceName, \emph{@PresentationTitle},
@@ -826,10 +821,9 @@ with a note that indicates the status of the publication
 \end{tabular}
 \end{IOWA ONLY}
 
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[] \textbf{International --- Invited Talk}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Month @Year 
@@ -859,9 +853,9 @@ with a note that indicates the status of the publication
    @City, @State
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[] \textbf{International --- Keynote Talk}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Month @Year 
@@ -876,8 +870,10 @@ with a note that indicates the status of the publication
 \end{tabular}
 
 %The above are just examples, all already allowed. The general format is the one below.
-
+%
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \item[] \textbf{@Scope --- @PresentationType}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Month @Year 
@@ -1080,18 +1076,6 @@ with a note that indicates the status of the publication
  & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
 \end{tabular}
 
-%-----------------------
-\subsection*{Community}
-%-----------------------
-
-\begin{tabular}{l@{\quad\ }p{34em}} 
- @Year -- @Year 
- & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
- \\[.5ex]
- @Year -- @Year 
- & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
-\end{tabular}
-
 %----------------------
 \subsection*{Industry}
 %----------------------
@@ -1139,8 +1123,6 @@ with a note that indicates the status of the publication
 \end{tabular}
 
 \end{IOWA ONLY}
-
-
 
 \end{document}
 

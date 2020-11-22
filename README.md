@@ -27,7 +27,7 @@ It is imported by `cv-template.tex` with the command
 
 * `clas-standard-cv-template.docx` is the Word template provided by CLAS
 
-### Publication subsection
+### Publications subsection
 
 The entries for the publication subsection are generated _automatically_ using the **biblatex** package and **biber** (a more modern version of bibtex).
 Recent TeXLive distributions include by default biblatex, biber, and every packaged imported in `cv-template.tex`.

@@ -41,19 +41,11 @@
 \makeatletter
 \providecommand{\bib@extsym}{}
 \DeclareEntryOption[string]{contrib}{\renewcommand{\bib@extsym}{#1}}
-%\renewbibmacro*{begentry}{\printtext{\bib@extsym}}
+\renewbibmacro*{begentry}{\printtext{\bib@extsym}}
 \makeatother
 %% Used the suggestions to add asterisks in front of author list in biblio refs:
 %% https://tex.stackexchange.com/questions/317997/adding-symbols-to-the-beginning-of-certain-references-in-the-reference-list
 
-% To be used in bibtex files in entry of the form:
-%
-% options = {contrib=\equalc},
-%
-\newcommand{\majorc} {*\ }
-\newcommand{\secondc}{**\ }
-\newcommand{\equalc} {***\ }
-\newcommand{\minorc} {****\ }
 
 
 \usepackage{hyperref}
