@@ -25,11 +25,12 @@
 %% Comment this out if you do not want the new stuff to be in red
 \renewcommand{\new}[1]{\textcolor{red}{#1}}
 
-
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 %%% Comment one or the other commands below depending on 
 %%% where you want to include Iowa-specific info or not
 \toggletrue{internal}
-\togglefalse{internal}
+%\togglefalse{internal}
+%++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 \iftoggle{internal}{
  \includeversion{IOWA ONLY}
@@ -540,7 +541,10 @@ with a note that indicates the status of the publication
 (e.g., {\sf submitted}, {\sf under review}, {\sf accepted with minor revision}, {\sf accepted}, etc.).}
 \medskip
 
-\new{We are also proposing the addition of the subsections in red.}
+\new{We are also proposing the addition of the subsections in red.
+Technically, those subsection are already allowed as extensions.
+The proposal is their current placement before the end.
+}
 
 \printbibliography[title={\normalsize Refereed Articles},
  type=article,
@@ -616,14 +620,14 @@ with a note that indicates the status of the publication
 \smallskip
 
 \begin{tabular}{l@{\quad\ }p{35em}} 
- @Month -- @Year
+ @Month @Year
  & @Title --- @Role. Event held at @Venue @City, @State. 
    Sponsored by @Sponsor. 
    Commissioned by @Agency. 
    In collaboration with @CollaboratorList. 
    Further details at @WebAddress
-\\[3.5ex]
- @Month -- @Year
+   \medskip \\
+ @Month @Year
  & @Title --- @Role. Event held at @Venue @City, @State. 
    Sponsored by @Sponsor. 
    Commissioned by @Agency. 
@@ -635,7 +639,6 @@ with a note that indicates the status of the publication
 \subsection*{Inventions and Patents}
 %------------------------------------
 \smallskip
-
 \begin{enumerate} \setlength{\itemsep}{0ex}
  \item @InventorList. @Number, @Title. @Annotation
  \item @InventorList. @Number, @Title. @Annotation
@@ -646,10 +649,13 @@ with a note that indicates the status of the publication
 %----------------------------
 \smallskip
 
-\begin{enumerate} \setlength{\itemsep}{0ex}
- \item @InventorList. @Number, @Title. @Annotation
- \item @InventorList. @Number, @Title. @Annotation
-\end{enumerate}
+\begin{tabular}{l@{\quad\ }l} 
+ @Year -- @Year
+ & @SoftwareName, @BriefDescription, @URL
+\\[0.5ex]
+ @Year -- @Year
+ & @SoftwareName, @BriefDescription, @URL
+\end{tabular}
 
 \iowa{
 %----------------------------------------
@@ -1083,10 +1089,10 @@ with a note that indicates the status of the publication
 
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year -- @Year 
- & @CompanyName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+ & @CompanyName, @RoleOrExplanation[, @Annotation]
  \\[.5ex]
  @Year -- @Year 
- & @CompanyName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+ & @CompanyName, @RoleOrExplanation[, @Annotation]
 \end{tabular}
 
 %------------------------
@@ -1106,9 +1112,9 @@ with a note that indicates the status of the publication
 %---------------------------------
 
 \begin{tabular}{l@{\quad\ }p{34em}} 
- @Year  & @MediaType, @MediaName, @ScopeOfDistribution][, @Annotation]
+ @Year  & @MediaType, @MediaName, @ScopeOfDistribution[, @Annotation]
  \\[.5ex]
- @Year  & @MediaType, @MediaName, @ScopeOfDistribution][, @Annotation]
+ @Year  & @MediaType, @MediaName, @ScopeOfDistribution[, @Annotation]
 \end{tabular}
 
 %-------------------------------------------------
