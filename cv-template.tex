@@ -1,0 +1,1151 @@
+\documentclass[10pt]{article}
+
+%---------------------------------------------------------
+% Personal data
+%---------------------------------------------------------
+\newcommand{\me}{@First @Middle @Last}
+\newcommand{\dept}{Computer Science}
+\newcommand{\address}{14 MacLean Hall}
+\newcommand{\phone}{(319) 335-XXXX}
+\newcommand{\email}{\url{XXXX@uiowa.edu}}
+\newcommand{\web}{\url{http://www.cs.uiowa.edu/~XXXX}}
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+% CV Dates
+%---------------------------------------------------------
+\newcommand{\fromdate}{@FromDate}
+\newcommand{\todate}{@ToDate}
+\newcommand{\cvdate}{\fromdate\ -- \todate}
+\newcommand{\currdate}{\today}
+%---------------------------------------------------------
+
+\input{macros}
+
+%% Comment this out if you do not want the new stuff to be in red
+\renewcommand{\new}[1]{\textcolor{red}{#1}}
+
+
+%%% Comment one or the other commands below depending on 
+%%% where you want to include Iowa-specific info or not
+\toggletrue{internal}
+\togglefalse{internal}
+
+\iftoggle{internal}{
+ \includeversion{IOWA ONLY}
+ \renewcommand{\iowa}[1]{#1}
+}{
+ \excludeversion{IOWA ONLY}
+ \renewcommand{\iowa}[1]{}
+}
+
+\iftoggle{internal}{
+% Adds contrib option to bibtex files
+\makeatletter
+\renewbibmacro*{begentry}{\printtext{\bib@extsym}}
+\makeatother
+}{}
+
+
+%% Add bibtex files here, must include the .bib suffix
+\addbibresource{sample.bib}
+
+% This causes the generation of all the entries in sample.bib.
+\nocite{*}
+
+
+%-----------------------------------------
+% Setting headings
+%-----------------------------------------
+\lhead{\sl Curriculum Vitae}
+\rhead{\sl \me}
+%\lfoot{\sl \today}
+\lfoot{\sl \cvdate}
+\cfoot{}
+\rfoot{\rm\thepage}
+\pagestyle{fancy}
+%-----------------------------------------
+
+
+
+\begin{document}
+\thispagestyle{empty}
+
+%-----------------------------------------
+% Title section
+%-----------------------------------------
+\title{CURRICULUM VITAE}
+\author{
+{\Large\textbf \me} \\[1.3ex]
+{\textbf \dept}
+}
+\date{\cvdate}
+\maketitle
+%-----------------------------------------
+
+%-----------------------------------------
+% Address section
+%-----------------------------------------
+\noindent\rule{\textwidth}{1pt}
+\begin{center}
+\large
+\begin{tabular}{lcr}
+\begin{tabular}{l}
+\address \\
+The University of Iowa \\
+Iowa City, Iowa 52242
+\end{tabular}
+& \hspace{4.3em} &
+\begin{tabular}{l}
+{phone:} \phone	\\
+{email:} {\small \email} \\ 
+{web:} {\small \web} \\
+\end{tabular}
+\end{tabular}
+\end{center}
+%-----------------------------------------
+
+
+%=====================
+\section*{\education}
+%=====================
+
+%-------------------------------------
+\subsection*{Post Graduate Education}
+%-------------------------------------
+\smallskip
+
+\quad
+\begin{tabular}{l@{\quad\ }l}
+ @Year -- @Year  
+ & {\bf @LevelOrPosition}, @FieldOfStudy, @Institution \\
+ & {\bf Mentor(s):} @Mentors
+ \\[.5ex]
+ @Year -- @Year  
+ & {\bf @LevelOrPosition}, @FieldOfStudy, @Institution \\
+ & {\bf Mentor(s):} @Mentors
+ \\[.5ex]
+\end{tabular}
+
+
+%------------------------------
+\subsection*{Higher Education}
+%------------------------------
+\smallskip
+
+\quad
+\begin{tabular}{l@{\quad\ }l}
+ @Year  
+ & {\bf Phd}, @FieldOfStudyOrMajor, @HonorsAndDistinctions, @Institution \\
+ & {\bf Thesis:} @Title
+ \\[.5ex]
+ @Year  
+ & {\bf M.S.}, @FieldOfStudyOrMajor, @HonorsAndDistinctions, @Institution \\
+ & {\bf Thesis:} @Title
+ \\[.5ex]
+ @Year  
+ & {\bf BS}, @FieldOfStudyOrMajor, @HonorsAndDistinctions, @Institution \\
+ & {\bf Thesis:} @Title
+ \\[.5ex]
+\end{tabular}
+
+
+%-------------------------------------------------
+\subsection*{Professional and Academic Positions}
+%-------------------------------------------------
+\smallskip
+
+\quad
+\begin{tabular}{l@{\quad\ }p{35em}}
+ @Year -- present
+ & {\bf @PositionOrTitleOrRank}, Department of Computer Science, 
+   The University of Iowa[. @Annotation]
+ \\[3.5ex]
+ @Year -- @Year
+ & {\bf @PositionOrTitleOrRank}, @DepartmentIfAny, 
+   @InstitutionOrOrganization[. @Annotation]
+ \\[3.5ex]
+ @Year -- @Year
+ & {\bf @PositionOrTitleOrRank}, @DepartmentIfAny, 
+   @InstitutionOrOrganization[. @Annotation]
+ \\[3.5ex]
+\end{tabular}
+
+
+%-------------------------------------------
+\subsection*{Licensures and Certifications}
+%-------------------------------------------
+\smallskip
+
+\quad
+\begin{tabular}{l@{\quad\ }l}
+ @Year
+ & {\bf @TitleOfLicensureOrCertification}, @SponsoringOrganization[. @Annotation]
+ \\[.5ex]
+ @Year  
+ & {\bf @TitleOfLicensureOrCertification}, @SponsoringOrganization[. @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+
+
+%-------------------------------
+\subsection*{Honors and Awards}
+%-------------------------------
+\smallskip
+
+\quad
+\begin{tabular}{l@{\quad\ }l}
+ @Year -- @Year
+ & {\bf @AwardOrHonorName}, @OrganizationOrSponsor[. @Annotation]
+ \\[.5ex]
+ @Year
+ & {\bf @AwardOrHonorName}, @OrganizationOrSponsor[. @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+
+%-------------------------
+\subsection*{Memberships}
+%-------------------------
+\smallskip
+
+\quad
+\begin{tabular}{l@{\quad\ }l}
+ @Year -- present
+ & @OrganizationName
+ \\[.5ex]
+ @Year -- @Year
+ & @OrganizationName
+ \\[.5ex]
+\end{tabular}
+
+
+
+\iowa{
+%===========================
+\section*{\teaching}
+%===========================
+}
+\begin{IOWA ONLY}
+
+%------------------------------------------------------
+\subsection*{Courses Taught at the University of Iowa}
+%------------------------------------------------------
+\smallskip
+
+\begin{tabular}{| l | l | p{15em} | c | c |}
+ \hline
+ {\bf Term} & {\bf Course \#} & {\bf Title} & {\bf Ten-day}    & {\bf Final} \\ 
+            &                 &             & {\bf Enroll.} & {\bf Enroll.} \\ 
+ \hline
+ \hline
+ @Sem @Year 
+ & @Prefix:@Number:@Section & @CourseName
+ & @Number & @Number
+ \\
+ \hline
+ @Sem @Year 
+ & @Prefix:@Number:@Section & @CourseName 
+ & @Number & @Number 
+ \\
+ \hline
+\end{tabular}
+\smallskip
+
+%------------------------------------------------------
+\subsection*{Additional Courses Taught (not on MAUI)}
+%------------------------------------------------------
+\smallskip
+
+\begin{tabular}{| l | l | p{15em} | c | c |}
+ \hline
+ {\bf Term} & {\bf Course \#} & {\bf Title} & {\bf Ten-day}    & {\bf Final} \\ 
+            &                 &             & {\bf Enroll.} & {\bf Enroll.} \\ 
+ \hline
+ \hline
+ @Sem @Year 
+ & @Prefix:@Number:@Section & @CourseName
+ & @Number & @Number
+ \\
+ \hline
+ @Sem @Year 
+ & @Prefix:@Number:@Section & @CourseName 
+ & @Number & @Number 
+ \\
+ \hline
+\end{tabular}
+\smallskip
+
+
+%-------------------------------------
+\subsection*{Innovations in Teaching}
+%-------------------------------------
+\smallskip
+
+\begin{itemize}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Design \& Implementation of New Courses}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{35em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Extramural Teaching Activities}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{35em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Intramural Teaching Activities}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{35em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Revisions in Existing Courses}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{35em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{@TypeOfContribution}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{35em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+\end{itemize}
+
+
+%---------------------------------------
+\subsection*{Student Mentoring Summary}
+%---------------------------------------
+\smallskip
+
+% this is typically for advising of undergrads
+
+\begin{tabular}{l@{\quad\ }p{35em}} 
+ @Term @Year -- @Term @Year
+ & @MentoringTypeOrExplanation, @Role, \# Students: @NoOfStudents[, @Annotation]
+ \\[.5ex]
+ @Term @Year -- @Term @Year
+ & @MentoringTypeOrExplanation, @Role, \# Students: @NoOfStudents[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%-------------------------------
+\subsection*{Student Mentoring}
+%-------------------------------
+\smallskip
+
+\begin{itemize}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{MCS --- Advisor}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{PhD --- Advisor}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{PhD --- Committee Chair} 
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{PhD --- Committee Member}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{@DegreeObjective --- @InvolvementType}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+ @Month @Year -- @Month @Year
+ & {\bf @Title}, @LastName, @FirstName; @StageOfDegreeCompletion[, @Annotation]
+ \\[.5ex]
+\end{tabular}
+\end{itemize}
+
+%------------------------------------
+\subsection*{Professional Mentoring}
+%------------------------------------
+\smallskip
+
+\begin{itemize}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Postdoctoral Researcher}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution, 
+   @MentoringActivityDescription
+ \\[3.5ex]
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution, 
+   @MentoringActivityDescription
+ \\[3.5ex]
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution, 
+   @MentoringActivityDescription
+ \\[3.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Research Scientist}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution,
+   @MentoringActivityDescription
+ \\[3.5ex]
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution,
+   @MentoringActivityDescription
+ \\[3.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Assistant Professor}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution,
+   @MentoringActivityDescription
+ \\[3.5ex]
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution,
+   @MentoringActivityDescription
+ \\[3.5ex]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{@MenteeLevel}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{30em}} 
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution,
+   @MentoringActivityDescription
+ \\[3.5ex]
+ @Month @Year -- @Month @Year
+ & @LastName, @FirstName; @ProgramName, @Department, @Institution,
+   @MentoringActivityDescription
+ \\[3.5ex]
+\end{tabular}
+\end{itemize}
+
+
+\end{IOWA ONLY}
+
+
+%======================
+\section*{\scholarship}
+%======================
+
+\iowa{
+\begin{center}
+\begin{tabular}{lll}
+{\bf CLAS * System:} & * = major contribution   &    *** = equal contribution \\
+                     & ** = secondary contribution & **** = minor contribution
+\end{tabular}
+\end{center}
+}
+
+
+%-------------------------------
+\subsection*{Publications}
+%-------------------------------
+\smallskip
+
+\new{We propose not to have a \textbf{Publication in Progress} subsection
+and instead add each publication in progress in the proper subsection below,d 
+with a note that indicates the status of the publication
+(e.g., {\sf submitted}, {\sf under review}, {\sf accepted with minor revision}, {\sf accepted}, etc.).}
+\medskip
+
+\new{We are also proposing the addition of the subsections in red.}
+
+\printbibliography[title={\normalsize Refereed Articles},
+ type=article,
+ notkeyword=nonref,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize \new{Refereed Conference Proceedings}},
+ type=inproceedings,
+ notkeyword=electronic,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize Non-Refereed Articles},
+ type=article,
+ keyword=nonref,
+ notkeyword=abstract,
+ notkeyword=electronic,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize Books},
+ filter=bookOrProc,
+ notkeyword=electronic,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize Refereed Book Chapters},
+ type=incollection,
+ notkeyword=nonref,
+ notkeyword=electronic,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize Book Chapters},
+ type=incollection,
+ keyword=nonref,
+ notkeyword=electronic,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize Electronic Publications},
+ keyword=electronic,
+ resetnumbers=true
+]
+%% This subsection should contain non-refereed publications that are only available
+%% in electronic form. Examples include edited electronic proceedings and
+%% arxiv reports (not associated to a journal publication).
+
+
+\printbibliography[title={\normalsize \new{Technical Reports}},
+ type=report,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize Abstracts},
+ keyword=abstract,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize Reviews},
+ keyword=review,
+ resetnumbers=true
+]
+
+\paragraph{@OtherContributionType}
+[as above]
+
+
+%---------------------------------------
+\subsection*{Performances and Exhibits}
+%---------------------------------------
+\smallskip
+
+\begin{tabular}{l@{\quad\ }p{35em}} 
+ @Month -- @Year
+ & @Title --- @Role. Event held at @Venue @City, @State. 
+   Sponsored by @Sponsor. 
+   Commissioned by @Agency. 
+   In collaboration with @CollaboratorList. 
+   Further details at @WebAddress
+\\[3.5ex]
+ @Month -- @Year
+ & @Title --- @Role. Event held at @Venue @City, @State. 
+   Sponsored by @Sponsor. 
+   Commissioned by @Agency. 
+   In collaboration with @CollaboratorList. 
+   Further details at @WebAddress
+\end{tabular}
+
+
+%------------------------------------
+\subsection*{Inventions and Patents}
+%------------------------------------
+\smallskip
+
+\begin{enumerate} \setlength{\itemsep}{0ex}
+ \item @InventorList. @Number, @Title. @Annotation
+ \item @InventorList. @Number, @Title. @Annotation
+\end{enumerate}
+
+
+%----------------------------
+\subsection*{\new{Software}}
+%----------------------------
+\smallskip
+
+\begin{enumerate} \setlength{\itemsep}{0ex}
+ \item @InventorList. @Number, @Title. @Annotation
+ \item @InventorList. @Number, @Title. @Annotation
+\end{enumerate}
+
+\iowa{
+%----------------------------------------
+\subsection*{Areas of Research Interest}
+%----------------------------------------
+\smallskip
+
+\begin{itemize} \setlength{\itemsep}{0ex}
+ \item [] @Area
+ \item [] @Area
+ \item [] @Area
+\end{itemize}
+}
+
+
+
+%----------------------------------
+\subsection*{Grants and Contracts}
+%----------------------------------
+\smallskip
+
+\begin{itemize}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Submitted}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @From -- @To 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Funded by @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+   \smallskip \\
+ @From -- @To 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Funded by @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Current}
+%~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @From -- @To 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Funded by @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+   \smallskip \\
+ @From -- @To 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Funded by @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Completed}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @From -- @To 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Funded by @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+   \smallskip \\
+ @From -- @To 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Funded by @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+\end{tabular}
+
+\begin{IOWA ONLY}
+%~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Unfunded}
+%~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @SubmisDate 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Submitted to @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+   \smallskip \\
+ @SubmisDate 
+ & \emph{@Title @ContractOrGrantNumber} \\
+ & Submitted to @AwardingOrganization. 
+   Award amount: (\$@TotalAmountAwarded) 
+   Percent effort: PercentOfEffortOrNumberOfMonths. 
+   Investigator(s) @InvestigatorAndRoleList. 
+   Iowa portion: \$@AmountAwardedToIowa.
+\end{tabular}
+\end{IOWA ONLY}
+
+\end{itemize}
+
+
+
+%-----------------------------------------------------------
+\subsection*{Invited Lectures and Conference Presentations}
+%-----------------------------------------------------------
+\smallskip
+
+\begin{itemize}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{National --- Colloquium}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+   \smallskip \\
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{National --- Invited Lecture}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+   \smallskip \\
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+\end{tabular}
+
+\begin{IOWA ONLY}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{National --- Conference Presentations}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Month @Year 
+ & @ConferenceName, \emph{@PresentationTitle},
+   @City, [@State,] @Country. \\
+ & Presenters/Authors: @AuthorList. \\
+ & Student Presenters/Authors: @AuthorList.
+ \\[.5ex]
+ @Month @Year 
+ & @ConferenceName, \emph{@PresentationTitle},
+   @City, [@State,] @Country. \\
+ & Presenters/Authors: @AuthorList. \\
+ & Student Presenters/Authors: @AuthorList.
+% \\[.5ex]
+\end{tabular}
+\end{IOWA ONLY}
+
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{International --- Invited Talk}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+   \smallskip \\
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{International --- Invited Lecture/Tutorial}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+   \smallskip \\
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{International --- Keynote Talk}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+   \smallskip \\
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City, @State
+\end{tabular}
+
+%The above are just examples, all already allowed. The general format is the one below.
+
+\item[] \textbf{@Scope --- @PresentationType}
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City[, @State] [, @Country]
+   \smallskip \\
+ @Month @Year 
+ & [@ConferenceOrMeetingName,] \emph{@PresentationTitle},
+   [@HostingOrg,]
+   @City[, @State] [, @Country]
+   \smallskip \\
+\end{tabular}
+\end{itemize}
+
+
+%===================
+\section*{\service}
+%===================
+
+%------------------------
+\subsection*{Profession}
+%------------------------
+
+\new{Proposing the following subdivisions, for readability}
+
+\begin{itemize}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Editor-in-chief}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @PublicationName[, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @PublicationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Associate Editor}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @PublicationName[, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @PublicationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Trustee}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Steering Committee Member}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Coordinator}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Program Committee Chair}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Program Committee Member}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Co-organizer}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
+
+\begin{IOWA ONLY}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Research Proposal Reviewer}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Journal Reviewer}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Conference/Workshop Reviewer}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
+\end{IOWA ONLY}
+
+\end{itemize}
+
+
+
+\begin{IOWA ONLY}
+%------------------------
+\subsection*{Department}
+%------------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @CommitteeName[, @RoleOrExplanation][, @InstitutionIfNotIowa][, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @CommitteeName[, @RoleOrExplanation][, @InstitutionIfNotIowa][, @Annotation]
+\end{tabular}
+
+%---------------------
+\subsection*{College}
+%---------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @CommitteeName[, @RoleOrExplanation][, @InstitutionIfNotIowa][, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @CommitteeName[, @RoleOrExplanation][, @InstitutionIfNotIowa][, @Annotation]
+\end{tabular}
+
+%------------------------
+\subsection*{University}
+%------------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @CommitteeName[, @RoleOrExplanation][, @InstitutionIfNotIowa][, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @CommitteeName[, @RoleOrExplanation][, @InstitutionIfNotIowa][, @Annotation]
+\end{tabular}
+
+%-----------------------
+\subsection*{Community}
+%-----------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+\end{tabular}
+
+%-----------------------
+\subsection*{Community}
+%-----------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+\end{tabular}
+
+%----------------------
+\subsection*{Industry}
+%----------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @CompanyName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @CompanyName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+\end{tabular}
+
+%------------------------
+\subsection*{@OtherScope}
+%------------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & @OrgName, @CommitteeName[, @RoleOrExplanation][, @Annotation]
+\end{tabular}
+
+%---------------------------------
+\subsection*{Media Contributions}
+%---------------------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year  & @MediaType, @MediaName, @ScopeOfDistribution][, @Annotation]
+ \\[.5ex]
+ @Year  & @MediaType, @MediaName, @ScopeOfDistribution][, @Annotation]
+\end{tabular}
+
+%-------------------------------------------------
+\subsection*{Professional Development Activities}
+%-------------------------------------------------
+
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year -- @Year 
+ & ActivityTypeOrExplanation, @Title, @SponsoringOrg[, @Annotation]
+ \\[.5ex]
+ @Year -- @Year 
+ & ActivityTypeOrExplanation, @Title, @SponsoringOrg[, @Annotation]
+\end{tabular}
+
+\end{IOWA ONLY}
+
+
+
+\end{document}
+
+
+
+
+
+

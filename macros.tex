@@ -1,0 +1,103 @@
+%!TEX root = cv-template.tex
+
+\usepackage{vmargin}
+
+\setpapersize{USletter}
+\setmarginsrb{25mm}% left
+	         {30mm}% top
+             {25mm}% right
+             {20mm}% bottom
+	     {\headheight}{\headsep}{\footheight}{\footskip}
+\usepackage{fancyheadings}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{version}
+\usepackage{url}
+\usepackage{array}
+
+%-------------------------------------------------------------
+% Allows the use of underscore in text
+% seful for DOIs with underscores in them
+\usepackage[strings]{underscore}
+%-------------------------------------------------------------
+
+%-------------------------------------------------------------
+\usepackage[         % see https://ctan.org/pkg/biblatex
+ backend=biber,      % can be changed to bibtex but with limited functionality
+ style=ieee,         % prints entries in enumeration style
+ sorting=ydnt,       % sorts by year (descending), name, and title
+ defernumbers=true,  % allows local numbering of bibliographies
+]{biblatex}
+
+% Useful biblatex filters
+
+%\defbibfilter{abstracts}{%
+% ( type=misc or type=inproceedings )
+% and keyword=abstract
+%}
+\defbibfilter{bookOrProc}{%
+ type=book or type=proceedings
+}
+
+\makeatletter
+\providecommand{\bib@extsym}{}
+\DeclareEntryOption[string]{contrib}{\renewcommand{\bib@extsym}{#1}}
+%\renewbibmacro*{begentry}{\printtext{\bib@extsym}}
+\makeatother
+%% Used the suggestions to add asterisks in front of author list in biblio refs:
+%% https://tex.stackexchange.com/questions/317997/adding-symbols-to-the-beginning-of-certain-references-in-the-reference-list
+
+% To be used in bibtex files in entry of the form:
+%
+% options = {contrib=\equalc},
+%
+\newcommand{\majorc} {*\ }
+\newcommand{\secondc}{**\ }
+\newcommand{\equalc} {***\ }
+\newcommand{\minorc} {****\ }
+
+
+\usepackage{hyperref}
+\hypersetup{
+ pdfborder={0 0 0},
+ colorlinks=true,
+ linkcolor=blue,
+ urlcolor=blue,
+ citecolor=blue,
+ pdfauthor={\me},
+ pdftitle=Curriculum Vitae
+}
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+%\usepackage{etoolbox} % already included by biblatex
+\newtoggle{internal} % from etoolbox
+%-------------------------------------------------------------
+
+
+%-------------------------------------------------------------
+\renewcommand{\today}{\ifcase\month\or
+ January\or February\or March\or April\or May\or June\or
+ July\or August\or September\or October\or November\or December\fi
+ \space\number\year}
+
+\newcommand{\new}[1]{#1}
+\newcommand{\shade}[1]{}
+\newcommand{\iowa}[1]{#1}
+
+%\newcommand{\doi}[1]{{\small \url{#1}}}
+
+%-------------------------------------------------------------
+% Adds line at beginning of section
+
+\newcommand{\mainsec}[1]{%
+\noindent\rule{\textwidth}{1pt}
+\LARGE \sc #1}
+
+\newcommand{\education}{\mainsec{Education and Professional History}}
+\newcommand{\teaching}{\mainsec{Teaching}}
+\newcommand{\scholarship}{\mainsec{Scholarship}}
+\newcommand{\service}{\mainsec{Service}}
+%-------------------------------------------------------------
+
+
