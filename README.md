@@ -29,8 +29,8 @@ It is imported by `cv-template.tex` with the command
 
 ### Publications subsection
 
-The entries for the publication subsection are generated _automatically_ using the **biblatex** package and **biber** (a more modern version of bibtex).
-Recent TeXLive distributions include by default biblatex, biber, and every packaged imported in `cv-template.tex`.
+The entries for the publication subsection are generated _automatically_ using the **[biblatex](https://ctan.org/topic/biblatex)** package and **[biber](https://ctan.org/pkg/biber)** (a more modern version of bibtex).
+Recent [TeXLive](https://www.tug.org/texlive/) distributions include by default biblatex, biber, and every packaged imported in `cv-template.tex`.
 
 The explicitly set options of biblatex (in `macros.tex`) are:
 * `backend=biber` This is actually the default. The value can be changed to `bibtex` but with limited functionality. Not recommended.
