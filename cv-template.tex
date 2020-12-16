@@ -546,17 +546,14 @@ Technically, those subsection are already allowed as extensions.
 The proposal is their current placement before the end.
 }
 
+
 \printbibliography[title={\normalsize Refereed Articles},
- type=article,
+ filter=journalOrConf,
+ notkeyword=electronic,
  notkeyword=nonref,
  resetnumbers=true
 ]
 
-\printbibliography[title={\normalsize \new{Refereed Conference Proceedings}},
- type=inproceedings,
- notkeyword=electronic,
- resetnumbers=true
-]
 
 \printbibliography[title={\normalsize Non-Refereed Articles},
  type=article,
@@ -567,7 +564,13 @@ The proposal is their current placement before the end.
 ]
 
 \printbibliography[title={\normalsize Books},
- filter=bookOrProc,
+ type=book,
+ notkeyword=electronic,
+ resetnumbers=true
+]
+
+\printbibliography[title={\normalsize \new{Edited Volumes}},
+ filter=procsOrColls,
  notkeyword=electronic,
  resetnumbers=true
 ]
@@ -1030,9 +1033,22 @@ The proposal is their current placement before the end.
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
 \end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{\new{Other}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
 \end{IOWA ONLY}
 
 \end{itemize}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \begin{IOWA ONLY}
 %------------------------

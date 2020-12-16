@@ -34,8 +34,11 @@
 % ( type=misc or type=inproceedings )
 % and keyword=abstract
 %}
-\defbibfilter{bookOrProc}{%
- type=book or type=proceedings
+\defbibfilter{journalOrConf}{%
+ type=article or type=inproceedings
+}
+\defbibfilter{procsOrColls}{%
+ type=collection or type=proceedings
 }
 
 \makeatletter
