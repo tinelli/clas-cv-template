@@ -3,11 +3,10 @@
 title: Latex template for CLAS-compatible CVs
 author: Cesare Tinelli
 date: Nov 2020
+updated: April 2021
 ---
 
-
 This repository contains a Latex CV Template compatible with Word template recommended by the College of Liberal Arts and Science of the University of Iowa.
-
 
 ### Included files
 
@@ -30,18 +29,18 @@ It is imported by `cv-template.tex` with the command
 ### Publications subsection
 
 The entries for the publication subsection are generated _automatically_ using the **[biblatex](https://ctan.org/topic/biblatex)** package and **[biber](https://ctan.org/pkg/biber)** (a more modern version of bibtex).
-Recent [TeXLive](https://www.tug.org/texlive/) distributions include by default biblatex, biber, and every packaged imported in `cv-template.tex`.
+Recent [TeXLive](https://www.tug.org/texlive/) distributions include by default biblatex, biber, and every package imported in `cv-template.tex`.
 
-The explicitly set options of biblatex (in `macros.tex`) are:
+The options of biblatex explicitly set in `macros.tex` are:
 * `backend=biber` This is actually the default. The value can be changed to `bibtex` but with limited functionality. Not recommended.
 * `style=ieee` Among the bibliography formats supported by biblatex, this is the closest to the format of the CLAS standard, with the only relevant exception that author names are listed with first name initial and last name (instead of last name and first name initial). This will have to do because the other pdflatex formats deviate even more.  
 
 * `sorting=ydnt` causes entries to be sorted by year (in descending order), name, and title
- * `defernumbers=true` allows local numbering of bibliography per subsection.
+* `defernumbers=true` allows local numbering of bibliography per subsection.
 
 ### Bibtex entries
 
-The entries in `sample.bib` are standard bibtex entries but with these additional attribute-values pairs used by biblatex to selected desired entries:
+The entries in `sample.bib` are standard bibtex entries but with these additional attribute-values pairs used by biblatex to select desired entries:
 
 * `keywords` contains a keyword used by biblatex as a filter. Currently, possible values are 
    - `nonref` for non-refereed articles publications, 
@@ -49,9 +48,8 @@ The entries in `sample.bib` are standard bibtex entries but with these additiona
    - `review` for reviews,
    - `abstract` for non-refereed abstracts.
 
-* `options` is used to provide, as a biblatex option, the level of contribution of each publication (expressed as a string of asterisks) as required by CLAS. The value has to have the form 
-`contrib=*`, `contrib=**`, and so on. 
-The macros `\majorc`, `\equalc` can be used in alternative to the  asterisks.
+* `options` is used to provide, as a biblatex option, the level of contribution of each publication (expressed as a string of asterisks) as required by CLAS. The value has to have the form `contrib=*`, `contrib=**`, and so on. 
+The macros `\majorc`, `\equalc` can be used in alternative to the asterisks.
 
 Note that the `doi` and `url` attributes are directly supported by biblatex and are automatically converted into the proper URL link in the PDF.
 
