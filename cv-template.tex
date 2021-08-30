@@ -535,16 +535,22 @@ Iowa City, Iowa 52242
 %-------------------------------
 \smallskip
 
-\new{We propose not to have a \textbf{Publication in Progress} subsection
-and instead add each publication in progress in the proper subsection below,d 
-with a note that indicates the status of the publication
-(e.g., {\sf submitted}, {\sf under review}, {\sf accepted with minor revision}, {\sf accepted}, etc.).}
-\medskip
-
-\new{We are also proposing the addition of the subsections in red.
-Technically, those subsection are already allowed as extensions.
-The proposal is their current placement before the end.
-}
+%% Notes:
+%
+% We do not to have a \textbf{Publication in Progress} subsection
+% and instead add each publication in progress in the proper subsection below, 
+% with a note that indicates the status of the publication
+% (e.g., {\sf submitted}, {\sf under review}, {\sf accepted with minor revision}, 
+% {\sf accepted}, etc.).}
+%
+% We are add the subsections
+% 
+% - Edited Volumes
+% - Technical Reports
+%
+% Technically, those subsection are already allowed as extensions.
+% The difference with the University template is their current placement
+% before the end.
 
 
 \printbibliography[title={\normalsize Refereed Articles},
@@ -647,9 +653,9 @@ The proposal is their current placement before the end.
  \item @InventorList. @Number, @Title. @Annotation
 \end{enumerate}
 
-%----------------------------
-\subsection*{\new{Software}}
-%----------------------------
+%----------------------
+\subsection*{Software}
+%----------------------
 \smallskip
 
 \begin{tabular}{l@{\quad\ }l} 
@@ -660,7 +666,7 @@ The proposal is their current placement before the end.
  & @SoftwareName, @BriefDescription, @URL
 \end{tabular}
 
-\iowa{
+\begin{IOWA ONLY}
 %----------------------------------------
 \subsection*{Areas of Research Interest}
 %----------------------------------------
@@ -671,7 +677,7 @@ The proposal is their current placement before the end.
  \item [] @Area
  \item [] @Area
 \end{itemize}
-}
+\end{IOWA ONLY}
 
 %----------------------------------
 \subsection*{Grants and Contracts}
@@ -910,12 +916,13 @@ The proposal is their current placement before the end.
 \subsection*{Profession}
 %------------------------
 
-\new{Proposing the following subdivisions, for readability}
+% Note:
+% We have subsections, for readability
 
 \begin{itemize}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Editor-in-chief}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Editor-in-chief}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year -- @Year 
@@ -925,9 +932,9 @@ The proposal is their current placement before the end.
  & @PublicationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Associate Editor}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Associate Editor}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year -- @Year 
@@ -937,9 +944,9 @@ The proposal is their current placement before the end.
  & @PublicationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Trustee}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Trustee}
+%~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year -- @Year 
@@ -949,9 +956,9 @@ The proposal is their current placement before the end.
  & @OrganizationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Steering Committee Member}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Steering Committee Member}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year -- @Year 
@@ -961,9 +968,9 @@ The proposal is their current placement before the end.
  & @OrganizationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Coordinator}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Coordinator}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year -- @Year 
@@ -973,19 +980,9 @@ The proposal is their current placement before the end.
  & @OrganizationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Program Committee Chair}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
- @Year & @OrganizationName[, @Annotation]
- \\[.5ex]
- @Year & @OrganizationName[, @Annotation]
-\end{tabular}
-
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Program Committee Member}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Program Committee Chair}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year & @OrganizationName[, @Annotation]
@@ -993,9 +990,19 @@ The proposal is their current placement before the end.
  @Year & @OrganizationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Co-organizer}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Program Committee Member}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\\[1.3ex]
+\begin{tabular}{l@{\quad\ }p{34em}} 
+ @Year & @OrganizationName[, @Annotation]
+ \\[.5ex]
+ @Year & @OrganizationName[, @Annotation]
+\end{tabular}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Co-organizer}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year & @OrganizationName[, @Annotation]
@@ -1004,9 +1011,9 @@ The proposal is their current placement before the end.
 \end{tabular}
 
 \begin{IOWA ONLY}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Research Proposal Reviewer}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Research Proposal Reviewer}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year & @OrganizationName[, @Annotation]
@@ -1014,9 +1021,9 @@ The proposal is their current placement before the end.
  @Year & @OrganizationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Journal Reviewer}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Journal Reviewer}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year & @OrganizationName[, @Annotation]
@@ -1024,9 +1031,9 @@ The proposal is their current placement before the end.
  @Year & @OrganizationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Conference/Workshop Reviewer}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Conference/Workshop Reviewer}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year & @OrganizationName[, @Annotation]
@@ -1034,9 +1041,9 @@ The proposal is their current placement before the end.
  @Year & @OrganizationName[, @Annotation]
 \end{tabular}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-\item[] \textbf{\new{Other}}
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%~~~~~~~~~~~~~~~~~~~~~~
+\item[] \textbf{Other}
+%~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
 \begin{tabular}{l@{\quad\ }p{34em}} 
  @Year & @OrganizationName[, @Annotation]
@@ -1047,8 +1054,6 @@ The proposal is their current placement before the end.
 
 \end{itemize}
 
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \begin{IOWA ONLY}
 %------------------------
