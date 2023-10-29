@@ -120,7 +120,7 @@ Iowa City, Iowa 52242
 \smallskip
 
 \quad
-\begin{tabular}{l@{\quad\ }l}
+\begin{tabular}{l@{\quad\ }p{40em}}
  @Year -- @Year  
  & {\bf @LevelOrPosition}, @FieldOfStudy, @Institution \\
  & {\bf Mentor(s):} @Mentors
@@ -138,7 +138,7 @@ Iowa City, Iowa 52242
 \smallskip
 
 \quad
-\begin{tabular}{l@{\quad\ }l}
+\begin{tabular}{l@{\quad\ }p{40em}}
  @Year  
  & {\bf Phd}, @FieldOfStudyOrMajor, @HonorsAndDistinctions, @Institution \\
  & {\bf Thesis:} @Title
@@ -199,7 +199,7 @@ Iowa City, Iowa 52242
 \smallskip
 
 \quad
-\begin{tabular}{l@{\quad\ }l}
+\begin{tabular}{l@{\quad\ }p{35em}}
  @Year -- @Year
  & {\bf @AwardOrHonorName}, @OrganizationOrSponsor[. @Annotation]
  \\[.5ex]
@@ -215,7 +215,7 @@ Iowa City, Iowa 52242
 \smallskip
 
 \quad
-\begin{tabular}{l@{\quad\ }l}
+\begin{tabular}{l@{\quad\ }p{35em}}
  @Year -- present
  & @OrganizationName
  \\[.5ex]
@@ -239,19 +239,19 @@ Iowa City, Iowa 52242
 %------------------------------------------------------
 \smallskip
 
-\begin{tabular}{| l | l | p{15em} | c | c |}
+\begin{tabular}{| l | l | p{20em} | c | c |}
  \hline
  {\bf Term} & {\bf Course \#} & {\bf Title} & {\bf Ten-day}    & {\bf Final} \\ 
             &                 &             & {\bf Enroll.} & {\bf Enroll.} \\ 
  \hline
  \hline
  @Sem @Year 
- & @Prefix:@Number:@Section & @CourseName
+ & @Prefix:@Num:@Sect & @CourseName
  & @Number & @Number
  \\
  \hline
  @Sem @Year 
- & @Prefix:@Number:@Section & @CourseName 
+ & @Prefix:@Num:@Sect & @CourseName 
  & @Number & @Number 
  \\
  \hline
@@ -263,19 +263,19 @@ Iowa City, Iowa 52242
 %------------------------------------------------------
 \smallskip
 
-\begin{tabular}{| l | l | p{15em} | c | c |}
+\begin{tabular}{| l | l | p{20em} | c | c |}
  \hline
  {\bf Term} & {\bf Course \#} & {\bf Title} & {\bf Ten-day}    & {\bf Final} \\ 
             &                 &             & {\bf Enroll.} & {\bf Enroll.} \\ 
  \hline
  \hline
  @Sem @Year 
- & @Prefix:@Number:@Section & @CourseName
+ & @Prefix:@Num:@Sect & @CourseName
  & @Number & @Number
  \\
  \hline
  @Sem @Year 
- & @Prefix:@Number:@Section & @CourseName 
+ & @Prefix:@Num:@Sect & @CourseName 
  & @Number & @Number 
  \\
  \hline
@@ -575,7 +575,7 @@ Iowa City, Iowa 52242
  resetnumbers=true
 ]
 
-\printbibliography[title={\normalsize \new{Edited Volumes}},
+\printbibliography[title={\normalsize Edited Volumes},
  filter=procsOrColls,
  notkeyword=electronic,
  resetnumbers=true
@@ -604,7 +604,7 @@ Iowa City, Iowa 52242
  resetnumbers=true
 ]
 
-\printbibliography[title={\normalsize \new{Technical Reports}},
+\printbibliography[title={\normalsize Technical Reports},
  type=report,
  resetnumbers=true
 ]
@@ -695,17 +695,17 @@ Iowa City, Iowa 52242
  @From -- @To 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Funded by @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
    \smallskip \\
  @From -- @To 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Funded by @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
 \end{tabular}
 \end{IOWA ONLY}
@@ -718,17 +718,17 @@ Iowa City, Iowa 52242
  @From -- @To 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Funded by @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
    \smallskip \\
  @From -- @To 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Funded by @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
 \end{tabular}
 
@@ -740,17 +740,17 @@ Iowa City, Iowa 52242
  @From -- @To 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Funded by @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
    \smallskip \\
  @From -- @To 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Funded by @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
 \end{tabular}
 
@@ -763,17 +763,17 @@ Iowa City, Iowa 52242
  @SubmisDate 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Submitted to @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
    \smallskip \\
  @SubmisDate 
  & \emph{@Title @ContractOrGrantNumber} \\
  & Submitted to @AwardingOrganization. 
-   Award amount: (\$@TotalAmountAwarded) 
+   Award amount: (\$@TotalAmountAwarded). 
    Percent effort: PercentOfEffortOrNumberOfMonths. 
-   Investigator(s) @InvestigatorAndRoleList. 
+   Investigator(s): @InvestigatorAndRoleList. 
    Iowa portion: \$@AmountAwardedToIowa.
 \end{tabular}
 \end{IOWA ONLY}
@@ -924,7 +924,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Editor-in-chief}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year -- @Year 
  & @PublicationName[, @Annotation]
  \\[.5ex]
@@ -936,7 +936,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Associate Editor}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year -- @Year 
  & @PublicationName[, @Annotation]
  \\[.5ex]
@@ -948,7 +948,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Trustee}
 %~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year -- @Year 
  & @OrganizationName[, @Annotation]
  \\[.5ex]
@@ -960,7 +960,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Steering Committee Member}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year -- @Year 
  & @OrganizationName[, @Annotation]
  \\[.5ex]
@@ -972,7 +972,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Coordinator}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year -- @Year 
  & @OrganizationName[, @Annotation]
  \\[.5ex]
@@ -984,7 +984,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Program Committee Chair}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year & @OrganizationName[, @Annotation]
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
@@ -994,7 +994,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Program Committee Member}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year & @OrganizationName[, @Annotation]
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
@@ -1004,7 +1004,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Co-organizer}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year & @OrganizationName[, @Annotation]
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
@@ -1015,7 +1015,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Research Proposal Reviewer}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year & @OrganizationName[, @Annotation]
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
@@ -1025,7 +1025,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Journal Reviewer}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year & @OrganizationName[, @Annotation]
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
@@ -1035,7 +1035,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Conference/Workshop Reviewer}
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year & @OrganizationName[, @Annotation]
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
@@ -1045,7 +1045,7 @@ Iowa City, Iowa 52242
 \item[] \textbf{Other}
 %~~~~~~~~~~~~~~~~~~~~~~
 \\[1.3ex]
-\begin{tabular}{l@{\quad\ }p{34em}} 
+\begin{tabular}{l@{\quad\ }p{38em}} 
  @Year & @OrganizationName[, @Annotation]
  \\[.5ex]
  @Year & @OrganizationName[, @Annotation]
